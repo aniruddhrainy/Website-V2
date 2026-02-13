@@ -48,157 +48,197 @@
                 <div class="quiz-progress-bar">
                     <div class="quiz-progress-fill" id="quizProgressFill" style="width: 0%"></div>
                 </div>
-                <span class="quiz-progress-text" id="quizProgressText">0/4 questions answered</span>
+                <span class="quiz-progress-text" id="quizProgressText">0 / 4</span>
             </div>
 
+            <!-- Slide Viewport -->
+            <div class="quiz-slider" id="quizSlider">
 
-            <!-- ===== STEP 1: What would you do? ===== -->
-            <div class="quiz-step active" id="quizStep1" data-step="1">
-                <h2>What would you do with an extra 2 hours every day?</h2>
-                <p class="quiz-subtitle">Select all that resonate with you</p>
+                <!-- ===== Q1: Primary Goal ===== -->
+                <div class="quiz-slide active" id="quizStep1" data-step="1">
+                    <h2>What is your <span class="accent">primary goal?</span></h2>
+                    <p class="quiz-subtitle">Select the one that resonates most</p>
 
-                <div class="quiz-options" data-multi="true">
-                    <div class="quiz-option" data-value="read">
-                        <div class="quiz-checkbox"></div>
-                        <span>Read more books</span>
+                    <div class="quiz-options" data-multi="false">
+                        <div class="quiz-option" data-value="productivity" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Boosting productivity</span>
+                        </div>
+                        <div class="quiz-option" data-value="attention" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Strengthening attention span</span>
+                        </div>
+                        <div class="quiz-option" data-value="burnout" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Reducing burnout</span>
+                        </div>
+                        <div class="quiz-option" data-value="motivation" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Increasing motivation</span>
+                        </div>
+                        <div class="quiz-option" data-value="sleep" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Enhancing sleep quality</span>
+                        </div>
                     </div>
-                    <div class="quiz-option" data-value="exercise">
-                        <div class="quiz-checkbox"></div>
-                        <span>Exercise or move my body</span>
-                    </div>
-                    <div class="quiz-option" data-value="project">
-                        <div class="quiz-checkbox"></div>
-                        <span>Work on a side project or creative hobby</span>
-                    </div>
-                    <div class="quiz-option" data-value="people">
-                        <div class="quiz-checkbox"></div>
-                        <span>Spend quality time with people I love</span>
-                    </div>
-                    <div class="quiz-option" data-value="sleep">
-                        <div class="quiz-checkbox"></div>
-                        <span>Sleep better and wake up rested</span>
-                    </div>
-                    <div class="quiz-option" data-value="create">
-                        <div class="quiz-checkbox"></div>
-                        <span>Create something meaningful</span>
-                    </div>
-                    <div class="quiz-option" data-value="exist">
-                        <div class="quiz-checkbox"></div>
-                        <span>Just… exist. Without a screen.</span>
-                    </div>
+
+                    <button class="quiz-next" id="quizNext1">Next →</button>
                 </div>
 
-                <button class="quiz-next" id="quizNext1">Next</button>
-            </div>
 
+                <!-- ===== Q2: Past Attempts ===== -->
+                <div class="quiz-slide" id="quizStep2" data-step="2">
+                    <h2>Which of the following have you<br><span class="accent">tried for screen time reduction?</span>
+                    </h2>
+                    <p class="quiz-subtitle">Select all that apply</p>
 
-            <!-- ===== STEP 2: Results Preview ===== -->
-            <div class="quiz-step" id="quizStep2" data-step="2">
-                <h2>What Tyme Boxed users reclaim<br>in 4 weeks</h2>
-                <p class="quiz-subtitle">Based on early user data</p>
+                    <div class="quiz-options" data-multi="true">
+                        <div class="quiz-option" data-value="screenlimits" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Screen Time limits</span>
+                        </div>
+                        <div class="quiz-option" data-value="deleting" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Deleting apps</span>
+                        </div>
+                        <div class="quiz-option" data-value="grayscale" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Grayscale mode</span>
+                        </div>
+                        <div class="quiz-option" data-value="willpower" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Willpower alone</span>
+                        </div>
+                    </div>
 
-                <div class="quiz-results-preview">
-                    <div class="quiz-stat-row">
-                        <span class="stat-label">› Focus time</span>
-                        <span class="stat-value">+ 2.5 hrs/day</span>
-                    </div>
-                    <div class="quiz-stat-row">
-                        <span class="stat-label">› Screen time</span>
-                        <span class="stat-value">− 58%</span>
-                    </div>
-                    <div class="quiz-stat-row">
-                        <span class="stat-label">› Sleep quality</span>
-                        <span class="stat-value">+ 40%</span>
-                    </div>
-                    <div class="quiz-stat-row">
-                        <span class="stat-label">› Intentional pickups</span>
-                        <span class="stat-value">+ 85%</span>
-                    </div>
+                    <button class="quiz-next" id="quizNext2">Next →</button>
                 </div>
 
-                <button class="quiz-next enabled" id="quizNext2">Continue</button>
-            </div>
 
+                <!-- ===== Q3: The Dopamine Itch (SCORED) ===== -->
+                <div class="quiz-slide" id="quizStep3" data-step="3">
+                    <h2>How long can you focus before<br><span class="accent">feeling the urge to check your
+                            phone?</span></h2>
+                    <p class="quiz-subtitle">Be honest — no one's watching</p>
 
-            <!-- ===== STEP 3: Which sound like you? ===== -->
-            <div class="quiz-step" id="quizStep3" data-step="3">
-                <h2>Which of these sound like you?</h2>
-                <p class="quiz-subtitle">Select all that apply — be honest with yourself</p>
+                    <div class="quiz-options" data-multi="false">
+                        <div class="quiz-option" data-value="under5" data-points="25">
+                            <div class="quiz-radio"></div>
+                            <span>Less than 5 minutes</span>
+                        </div>
+                        <div class="quiz-option" data-value="5to15" data-points="15">
+                            <div class="quiz-radio"></div>
+                            <span>5 – 15 minutes</span>
+                        </div>
+                        <div class="quiz-option" data-value="15to30" data-points="10">
+                            <div class="quiz-radio"></div>
+                            <span>15 – 30 minutes</span>
+                        </div>
+                        <div class="quiz-option" data-value="over30" data-points="5">
+                            <div class="quiz-radio"></div>
+                            <span>30+ minutes</span>
+                        </div>
+                    </div>
 
-                <div class="quiz-options" data-multi="true">
-                    <div class="quiz-option" data-value="ignore">
-                        <div class="quiz-checkbox"></div>
-                        <span>I set app limits but always tap "Ignore"</span>
-                    </div>
-                    <div class="quiz-option" data-value="autopilot">
-                        <div class="quiz-checkbox"></div>
-                        <span>I open Instagram / TikTok without even thinking about it</span>
-                    </div>
-                    <div class="quiz-option" data-value="morning">
-                        <div class="quiz-checkbox"></div>
-                        <span>I reach for my phone first thing in the morning</span>
-                    </div>
-                    <div class="quiz-option" data-value="anxious">
-                        <div class="quiz-checkbox"></div>
-                        <span>I feel anxious or restless without my phone nearby</span>
-                    </div>
-                    <div class="quiz-option" data-value="detox-fail">
-                        <div class="quiz-checkbox"></div>
-                        <span>I've tried digital detoxes and they didn't stick</span>
-                    </div>
-                    <div class="quiz-option" data-value="time-warp">
-                        <div class="quiz-checkbox"></div>
-                        <span>I often lose track of 30+ minutes scrolling without realizing</span>
-                    </div>
-                    <div class="quiz-option" data-value="bed">
-                        <div class="quiz-checkbox"></div>
-                        <span>I stay up later than I want to because of my phone</span>
-                    </div>
+                    <button class="quiz-next" id="quizNext3">Next →</button>
                 </div>
 
-                <button class="quiz-next" id="quizNext3">Next</button>
-            </div>
 
+                <!-- ===== Q4: PFC Control (SCORED) ===== -->
+                <div class="quiz-slide" id="quizStep4" data-step="4">
+                    <h2>How often do you<br><span class="accent">"Ignore Limit"</span> on your phone apps?</h2>
+                    <p class="quiz-subtitle">That little button that undoes all your good intentions</p>
 
-            <!-- ===== STEP 4: Educational Bridge ===== -->
-            <div class="quiz-step" id="quizStep4" data-step="4">
-                <div class="quiz-bridge">
-                    <h2>The problem isn't you.<br><span class="accent">It's the design.</span></h2>
-                    <p>Every app on your phone was built by teams of brilliant engineers whose entire job is to keep you
-                        scrolling. They use variable-ratio reinforcement, dopamine loops, and social validation triggers
-                        — the same techniques used in slot machines.</p>
-                    <p>You're not weak. You're not undisciplined. You're fighting a battle that willpower was never
-                        designed to win.</p>
-                    <p>That's why the solution can't be another app. It has to be something physical. Something that
-                        exists outside the system it's designed to fight.</p>
+                    <div class="quiz-options" data-multi="false">
+                        <div class="quiz-option" data-value="daily" data-points="25">
+                            <div class="quiz-radio"></div>
+                            <span>Daily — it's basically muscle memory</span>
+                        </div>
+                        <div class="quiz-option" data-value="fewweek" data-points="15">
+                            <div class="quiz-radio"></div>
+                            <span>A few times a week</span>
+                        </div>
+                        <div class="quiz-option" data-value="rarely" data-points="5">
+                            <div class="quiz-radio"></div>
+                            <span>Rarely</span>
+                        </div>
+                    </div>
+
+                    <button class="quiz-next" id="quizNext4">See your results →</button>
                 </div>
 
-                <button class="quiz-next enabled" id="quizNext4">See your result</button>
+            </div><!-- /quiz-slider -->
+
+
+            <!-- ===== SCIENCE TRANSITION ===== -->
+            <div class="quiz-transition" id="quizTransition">
+                <div class="quiz-transition-inner">
+                    <div class="quiz-transition-icon">🧠</div>
+                    <h3>Analyzing your PFC profile…</h3>
+                    <p>Modern life overloads the brain's control center, the <strong>Prefrontal Cortex (PFC)</strong>.
+                        It governs focus, decision-making, and impulse control.</p>
+                    <p>Tyme Boxed uses <strong>friction-based recovery</strong> to strengthen the PFC, helping you
+                        transition from a <em>"High-Reactive"</em> state to <em>"Deep Flow."</em></p>
+                    <div class="quiz-transition-loader">
+                        <div class="quiz-transition-bar"></div>
+                    </div>
+                </div>
             </div>
 
 
             <!-- ===== RESULT PAGE ===== -->
             <div class="quiz-result" id="quizResult">
-                <div class="quiz-result-layout">
-                    <div>
-                        <span class="section-label">Your result</span>
-                        <h2>Tyme Boxed is built for<br><span class="accent">exactly this.</span></h2>
-                        <p>Based on your answers, you're experiencing the exact patterns that Tyme Boxed was designed to
-                            interrupt — not through willpower, but through physical friction that gives your conscious
-                            brain the pause it needs.</p>
-                        <p>You already know what you'd do with the time. Now it's about getting it back.</p>
 
-                        <div class="quiz-email-form">
-                            <p>Get early access at ₹999 (50% off launch price):</p>
-                            <input type="email" class="quiz-email-input" placeholder="Your email address*"
-                                id="quizEmail">
-                            <button class="quiz-email-submit" id="quizEmailSubmit">Get Early Access →</button>
-                        </div>
+                <div class="quiz-result-header">
+                    <span class="section-label" id="resultLabel">Your result</span>
+                    <h2 id="resultHeadline">Tyme Boxed is built for<br><span class="accent">exactly this.</span></h2>
+                    <p id="resultSubtext">Based on your answers, you're experiencing the exact patterns that Tyme Boxed
+                        was designed to interrupt — not through willpower, but through physical friction that gives your
+                        conscious brain the pause it needs.</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="quiz-result-stats" id="resultStats">
+                    <div class="result-stat-card">
+                        <div class="result-stat-pct" data-stat="mood">+77%</div>
+                        <div class="result-stat-label">Mood</div>
                     </div>
-                    <div class="quiz-result-image">
-                        <img src="lifestyle.png" alt="Tyme Boxed — reclaim your time, physically" loading="lazy">
+                    <div class="result-stat-card">
+                        <div class="result-stat-pct" data-stat="focus">+75%</div>
+                        <div class="result-stat-label">Focus</div>
+                    </div>
+                    <div class="result-stat-card">
+                        <div class="result-stat-pct" data-stat="sleep">+70%</div>
+                        <div class="result-stat-label">Sleep</div>
+                    </div>
+                    <div class="result-stat-card">
+                        <div class="result-stat-pct" data-stat="productivity">+63%</div>
+                        <div class="result-stat-label">Productivity</div>
                     </div>
                 </div>
+
+                <p class="result-stats-caption">Your projected 4-week transformation with Tyme Boxed</p>
+
+                <!-- Science Hook -->
+                <div class="quiz-result-science">
+                    <div class="quiz-result-science-icon">🧠</div>
+                    <p>Your PFC has been operating in a high-reactive state — constantly interrupted, fatigued by
+                        micro-decisions, and overwhelmed by stimuli. Tyme Boxed introduces <strong>physical
+                            friction</strong> that gives your prefrontal cortex the recovery time it needs to regain
+                        control.</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="quiz-result-cta">
+                    <div class="quiz-email-form">
+                        <p>Get early access at ₹999 (50% off launch price):</p>
+                        <input type="email" class="quiz-email-input" placeholder="Your email address" id="quizEmail">
+                        <button class="quiz-email-submit" id="quizEmailSubmit">Get Early Access →</button>
+                    </div>
+
+                    <button class="quiz-retake" id="quizRetake">↻ Re-take Quiz</button>
+                </div>
+
             </div>
 
         </div>
