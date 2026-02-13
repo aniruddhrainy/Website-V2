@@ -22,17 +22,15 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="science.html">The Science</a></li>
                 <li><a href="quiz.html" class="active">Is Tyme Boxed for me?</a></li>
-                <li class="nav-cta-li">
-                    <a href="index.html#pricing" class="nav-cta">
-                        Pre-order now
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7" />
-                            <polyline points="7 7 17 7 17 17" />
-                        </svg>
-                    </a>
-                </li>
             </ul>
+            <a href="index.html#pricing" class="nav-cta">
+                Pre-order now
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                </svg>
+            </a>
             <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -48,7 +46,7 @@
                 <div class="quiz-progress-bar">
                     <div class="quiz-progress-fill" id="quizProgressFill" style="width: 0%"></div>
                 </div>
-                <span class="quiz-progress-text" id="quizProgressText">0 / 4</span>
+                <span class="quiz-progress-text" id="quizProgressText">0/4 questions answered</span>
             </div>
 
             <!-- Slide Viewport -->
@@ -56,7 +54,7 @@
 
                 <!-- ===== Q1: Primary Goal ===== -->
                 <div class="quiz-slide active" id="quizStep1" data-step="1">
-                    <h2>What is your <span class="accent">primary goal?</span></h2>
+                    <h2>What is your primary goal?</h2>
                     <p class="quiz-subtitle">Select the one that resonates most</p>
 
                     <div class="quiz-options" data-multi="false">
@@ -82,14 +80,13 @@
                         </div>
                     </div>
 
-                    <button class="quiz-next" id="quizNext1">Next →</button>
+                    <button class="quiz-next" id="quizNext1">Next</button>
                 </div>
 
 
                 <!-- ===== Q2: Past Attempts ===== -->
                 <div class="quiz-slide" id="quizStep2" data-step="2">
-                    <h2>Which of the following have you<br><span class="accent">tried for screen time reduction?</span>
-                    </h2>
+                    <h2>Which of the following have you<br>tried for screen time reduction?</h2>
                     <p class="quiz-subtitle">Select all that apply</p>
 
                     <div class="quiz-options" data-multi="true">
@@ -111,14 +108,13 @@
                         </div>
                     </div>
 
-                    <button class="quiz-next" id="quizNext2">Next →</button>
+                    <button class="quiz-next" id="quizNext2">Next</button>
                 </div>
 
 
                 <!-- ===== Q3: The Dopamine Itch (SCORED) ===== -->
                 <div class="quiz-slide" id="quizStep3" data-step="3">
-                    <h2>How long can you focus before<br><span class="accent">feeling the urge to check your
-                            phone?</span></h2>
+                    <h2>How long can you focus before<br>feeling the urge to check your phone?</h2>
                     <p class="quiz-subtitle">Be honest — no one's watching</p>
 
                     <div class="quiz-options" data-multi="false">
@@ -140,13 +136,13 @@
                         </div>
                     </div>
 
-                    <button class="quiz-next" id="quizNext3">Next →</button>
+                    <button class="quiz-next" id="quizNext3">Next</button>
                 </div>
 
 
                 <!-- ===== Q4: PFC Control (SCORED) ===== -->
                 <div class="quiz-slide" id="quizStep4" data-step="4">
-                    <h2>How often do you<br><span class="accent">"Ignore Limit"</span> on your phone apps?</h2>
+                    <h2>How often do you<br>"Ignore Limit" on your phone apps?</h2>
                     <p class="quiz-subtitle">That little button that undoes all your good intentions</p>
 
                     <div class="quiz-options" data-multi="false">
@@ -164,7 +160,7 @@
                         </div>
                     </div>
 
-                    <button class="quiz-next" id="quizNext4">See your results →</button>
+                    <button class="quiz-next" id="quizNext4">See your results</button>
                 </div>
 
             </div><!-- /quiz-slider -->
@@ -189,54 +185,55 @@
             <!-- ===== RESULT PAGE ===== -->
             <div class="quiz-result" id="quizResult">
 
-                <div class="quiz-result-header">
-                    <span class="section-label" id="resultLabel">Your result</span>
-                    <h2 id="resultHeadline">Tyme Boxed is built for<br><span class="accent">exactly this.</span></h2>
-                    <p id="resultSubtext">Based on your answers, you're experiencing the exact patterns that Tyme Boxed
-                        was designed to interrupt — not through willpower, but through physical friction that gives your
-                        conscious brain the pause it needs.</p>
-                </div>
+                <div class="quiz-result-split">
+                    <div class="quiz-result-left">
+                        <span class="section-label" id="resultLabel">YOUR RESULT</span>
+                        <h2 id="resultHeadline">Tyme Boxed is a strong fit for you.</h2>
+                        <p id="resultSubtext">Based on your answers, your Prefrontal Cortex is in a high-reactive state
+                            — constantly overloaded by micro-decisions and dopamine-driven interruptions. Tyme Boxed was
+                            built for exactly this.</p>
 
-                <!-- Stats Grid -->
-                <div class="quiz-result-stats" id="resultStats">
-                    <div class="result-stat-card">
-                        <div class="result-stat-pct" data-stat="mood">+77%</div>
-                        <div class="result-stat-label">Mood</div>
-                    </div>
-                    <div class="result-stat-card">
-                        <div class="result-stat-pct" data-stat="focus">+75%</div>
-                        <div class="result-stat-label">Focus</div>
-                    </div>
-                    <div class="result-stat-card">
-                        <div class="result-stat-pct" data-stat="sleep">+70%</div>
-                        <div class="result-stat-label">Sleep</div>
-                    </div>
-                    <div class="result-stat-card">
-                        <div class="result-stat-pct" data-stat="productivity">+63%</div>
-                        <div class="result-stat-label">Productivity</div>
-                    </div>
-                </div>
+                        <!-- Stats — Mave-style horizontal rows -->
+                        <h3 class="result-stats-heading">Results after 4 weeks with Tyme Boxed:</h3>
+                        <div class="quiz-result-stats" id="resultStats">
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Mood</div>
+                                <div class="result-stat-pct" data-stat="mood">+77%</div>
+                            </div>
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Focus</div>
+                                <div class="result-stat-pct" data-stat="focus">+75%</div>
+                            </div>
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Sleep</div>
+                                <div class="result-stat-pct" data-stat="sleep">+70%</div>
+                            </div>
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Productivity</div>
+                                <div class="result-stat-pct" data-stat="productivity">+63%</div>
+                            </div>
+                        </div>
 
-                <p class="result-stats-caption">Your projected 4-week transformation with Tyme Boxed</p>
+                        <!-- CTA -->
+                        <div class="quiz-result-cta">
+                            <div class="quiz-email-form">
+                                <p>Get early access at ₹999 (50% off launch price):</p>
+                                <input type="email" class="quiz-email-input" placeholder="Your email address"
+                                    id="quizEmail">
+                                <button class="quiz-email-submit" id="quizEmailSubmit">Get Early Access</button>
+                            </div>
 
-                <!-- Science Hook -->
-                <div class="quiz-result-science">
-                    <div class="quiz-result-science-icon">🧠</div>
-                    <p>Your PFC has been operating in a high-reactive state — constantly interrupted, fatigued by
-                        micro-decisions, and overwhelmed by stimuli. Tyme Boxed introduces <strong>physical
-                            friction</strong> that gives your prefrontal cortex the recovery time it needs to regain
-                        control.</p>
-                </div>
-
-                <!-- CTA -->
-                <div class="quiz-result-cta">
-                    <div class="quiz-email-form">
-                        <p>Get early access at ₹999 (50% off launch price):</p>
-                        <input type="email" class="quiz-email-input" placeholder="Your email address" id="quizEmail">
-                        <button class="quiz-email-submit" id="quizEmailSubmit">Get Early Access →</button>
+                            <button class="quiz-retake" id="quizRetake">↻ Re-take Quiz</button>
+                        </div>
                     </div>
 
-                    <button class="quiz-retake" id="quizRetake">↻ Re-take Quiz</button>
+                    <div class="quiz-result-right">
+                        <img src="results-lifestyle.png" alt="Peaceful lifestyle — digital wellness">
+                    </div>
                 </div>
 
             </div>

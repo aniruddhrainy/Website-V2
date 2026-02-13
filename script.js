@@ -272,6 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Show result
       if (quizResult) {
         quizResult.classList.add('active');
+        // Widen container for split layout
+        const container = document.querySelector('.quiz-container');
+        if (container) container.classList.add('results-active');
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -282,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const pct = (answered / totalSteps) * 100;
 
       if (progressFill) progressFill.style.width = pct + '%';
-      if (progressText) progressText.textContent = `${answered} / ${totalSteps}`;
+      if (progressText) progressText.textContent = `${answered}/${totalSteps} questions answered`;
     }
 
     // Email submit handler
@@ -328,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
           emailInput.placeholder = 'Your email address';
         }
         if (emailSubmit) {
-          emailSubmit.textContent = 'Get Early Access →';
+          emailSubmit.textContent = 'Get Early Access';
           emailSubmit.style.background = '';
           emailSubmit.style.color = '';
           emailSubmit.disabled = false;
@@ -336,6 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Hide result, show progress and first step
         if (quizResult) quizResult.classList.remove('active');
+        // Reset container width
+        const container = document.querySelector('.quiz-container');
+        if (container) container.classList.remove('results-active');
         if (quizTransition) {
           quizTransition.classList.remove('active');
           quizTransition.style.display = '';
@@ -343,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const progress = document.getElementById('quizProgress');
         if (progress) progress.style.display = '';
         if (progressFill) progressFill.style.width = '0%';
-        if (progressText) progressText.textContent = '0 / 4';
+        if (progressText) progressText.textContent = `0/${totalSteps} questions answered`;
 
         // Show step 1
         quizSlides.forEach(s => s.classList.remove('active'));
