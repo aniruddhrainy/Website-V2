@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Tyme Boxed for me? — Find out in 60 seconds</title>
+    <meta name="description"
+        content="Take a quick interactive quiz to discover if Tyme Boxed can help you reclaim your time, focus, and intention.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬛</text></svg>">
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">Tyme <span>Boxed</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="science.html">The Science</a></li>
+                <li><a href="quiz.html" class="active">Is Tyme Boxed for me?</a></li>
+                <li class="nav-cta-li">
+                    <a href="index.html#pricing" class="nav-cta">
+                        Pre-order now
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== QUIZ PAGE ========== -->
+    <div class="quiz-page">
+        <div class="quiz-container">
+
+            <!-- Progress Bar -->
+            <div class="quiz-progress" id="quizProgress">
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="quizProgressFill" style="width: 0%"></div>
+                </div>
+                <span class="quiz-progress-text" id="quizProgressText">0/4 questions answered</span>
+            </div>
+
+
+            <!-- ===== STEP 1: What would you do? ===== -->
+            <div class="quiz-step active" id="quizStep1" data-step="1">
+                <h2>What would you do with an extra 2 hours every day?</h2>
+                <p class="quiz-subtitle">Select all that resonate with you</p>
+
+                <div class="quiz-options" data-multi="true">
+                    <div class="quiz-option" data-value="read">
+                        <div class="quiz-checkbox"></div>
+                        <span>Read more books</span>
+                    </div>
+                    <div class="quiz-option" data-value="exercise">
+                        <div class="quiz-checkbox"></div>
+                        <span>Exercise or move my body</span>
+                    </div>
+                    <div class="quiz-option" data-value="project">
+                        <div class="quiz-checkbox"></div>
+                        <span>Work on a side project or creative hobby</span>
+                    </div>
+                    <div class="quiz-option" data-value="people">
+                        <div class="quiz-checkbox"></div>
+                        <span>Spend quality time with people I love</span>
+                    </div>
+                    <div class="quiz-option" data-value="sleep">
+                        <div class="quiz-checkbox"></div>
+                        <span>Sleep better and wake up rested</span>
+                    </div>
+                    <div class="quiz-option" data-value="create">
+                        <div class="quiz-checkbox"></div>
+                        <span>Create something meaningful</span>
+                    </div>
+                    <div class="quiz-option" data-value="exist">
+                        <div class="quiz-checkbox"></div>
+                        <span>Just… exist. Without a screen.</span>
+                    </div>
+                </div>
+
+                <button class="quiz-next" id="quizNext1">Next</button>
+            </div>
+
+
+            <!-- ===== STEP 2: Results Preview ===== -->
+            <div class="quiz-step" id="quizStep2" data-step="2">
+                <h2>What Tyme Boxed users reclaim<br>in 4 weeks</h2>
+                <p class="quiz-subtitle">Based on early user data</p>
+
+                <div class="quiz-results-preview">
+                    <div class="quiz-stat-row">
+                        <span class="stat-label">› Focus time</span>
+                        <span class="stat-value">+ 2.5 hrs/day</span>
+                    </div>
+                    <div class="quiz-stat-row">
+                        <span class="stat-label">› Screen time</span>
+                        <span class="stat-value">− 58%</span>
+                    </div>
+                    <div class="quiz-stat-row">
+                        <span class="stat-label">› Sleep quality</span>
+                        <span class="stat-value">+ 40%</span>
+                    </div>
+                    <div class="quiz-stat-row">
+                        <span class="stat-label">› Intentional pickups</span>
+                        <span class="stat-value">+ 85%</span>
+                    </div>
+                </div>
+
+                <button class="quiz-next enabled" id="quizNext2">Continue</button>
+            </div>
+
+
+            <!-- ===== STEP 3: Which sound like you? ===== -->
+            <div class="quiz-step" id="quizStep3" data-step="3">
+                <h2>Which of these sound like you?</h2>
+                <p class="quiz-subtitle">Select all that apply — be honest with yourself</p>
+
+                <div class="quiz-options" data-multi="true">
+                    <div class="quiz-option" data-value="ignore">
+                        <div class="quiz-checkbox"></div>
+                        <span>I set app limits but always tap "Ignore"</span>
+                    </div>
+                    <div class="quiz-option" data-value="autopilot">
+                        <div class="quiz-checkbox"></div>
+                        <span>I open Instagram / TikTok without even thinking about it</span>
+                    </div>
+                    <div class="quiz-option" data-value="morning">
+                        <div class="quiz-checkbox"></div>
+                        <span>I reach for my phone first thing in the morning</span>
+                    </div>
+                    <div class="quiz-option" data-value="anxious">
+                        <div class="quiz-checkbox"></div>
+                        <span>I feel anxious or restless without my phone nearby</span>
+                    </div>
+                    <div class="quiz-option" data-value="detox-fail">
+                        <div class="quiz-checkbox"></div>
+                        <span>I've tried digital detoxes and they didn't stick</span>
+                    </div>
+                    <div class="quiz-option" data-value="time-warp">
+                        <div class="quiz-checkbox"></div>
+                        <span>I often lose track of 30+ minutes scrolling without realizing</span>
+                    </div>
+                    <div class="quiz-option" data-value="bed">
+                        <div class="quiz-checkbox"></div>
+                        <span>I stay up later than I want to because of my phone</span>
+                    </div>
+                </div>
+
+                <button class="quiz-next" id="quizNext3">Next</button>
+            </div>
+
+
+            <!-- ===== STEP 4: Educational Bridge ===== -->
+            <div class="quiz-step" id="quizStep4" data-step="4">
+                <div class="quiz-bridge">
+                    <h2>The problem isn't you.<br><span class="accent">It's the design.</span></h2>
+                    <p>Every app on your phone was built by teams of brilliant engineers whose entire job is to keep you
+                        scrolling. They use variable-ratio reinforcement, dopamine loops, and social validation triggers
+                        — the same techniques used in slot machines.</p>
+                    <p>You're not weak. You're not undisciplined. You're fighting a battle that willpower was never
+                        designed to win.</p>
+                    <p>That's why the solution can't be another app. It has to be something physical. Something that
+                        exists outside the system it's designed to fight.</p>
+                </div>
+
+                <button class="quiz-next enabled" id="quizNext4">See your result</button>
+            </div>
+
+
+            <!-- ===== RESULT PAGE ===== -->
+            <div class="quiz-result" id="quizResult">
+                <div class="quiz-result-layout">
+                    <div>
+                        <span class="section-label">Your result</span>
+                        <h2>Tyme Boxed is built for<br><span class="accent">exactly this.</span></h2>
+                        <p>Based on your answers, you're experiencing the exact patterns that Tyme Boxed was designed to
+                            interrupt — not through willpower, but through physical friction that gives your conscious
+                            brain the pause it needs.</p>
+                        <p>You already know what you'd do with the time. Now it's about getting it back.</p>
+
+                        <div class="quiz-email-form">
+                            <p>Get early access at ₹999 (50% off launch price):</p>
+                            <input type="email" class="quiz-email-input" placeholder="Your email address*"
+                                id="quizEmail">
+                            <button class="quiz-email-submit" id="quizEmailSubmit">Get Early Access →</button>
+                        </div>
+                    </div>
+                    <div class="quiz-result-image">
+                        <img src="lifestyle.png" alt="Tyme Boxed — reclaim your time, physically" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html" class="footer-logo">Tyme <span>Boxed</span></a>
+            <ul class="footer-links">
+                <li><a href="science.html">The Science</a></li>
+                <li><a href="quiz.html">Is Tyme Boxed for me?</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2025 Tyme Boxed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
